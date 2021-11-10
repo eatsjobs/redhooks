@@ -7,6 +7,11 @@ const getCurrentTimeFormatted = () => {
   return `${hours}:${minutes}:${seconds}.${milliseconds}`;
 };
 
+/**
+ * logger
+ * @param {Function} reducer 
+ * @returns {Object}
+ */
 const logger = (reducer) => {
   const reducerWithLogger = (state, action) => {
     const next = reducer(state, action);

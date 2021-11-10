@@ -1,3 +1,8 @@
+/**
+ * async dispatch factory
+ * @param {Function} dispatch 
+ * @returns {Function<Promise>}
+ */
 const createAsyncDispatch = (dispatch) => async (promise, actionName) => {
   let payload = null;
   try {

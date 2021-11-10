@@ -3,6 +3,11 @@ import React, { createContext, useContext, useReducer } from "react";
 const capitalize = (k) => `${k[0].toUpperCase()}${k.slice(1, k.length)}`;
 const Empty = ({ children }) => children;
 
+/**
+ * createContexts
+ * @param {Array<String>} keys 
+ * @returns {Object}
+ */
 const createContexts = (keys) =>
   keys.reduce((o, key) => {
     const context = createContext({}); // Property context
@@ -15,6 +20,12 @@ const createContexts = (keys) =>
     ];
   }, []);
 
+/**
+ * createStore
+ * @param {Object} reducers 
+ * @param {Object} initialState 
+ * @returns {Object}
+ */
 const createStore = (reducers = {}, initialState) => {
   const contexts = createContexts(Object.keys(reducers));
 
@@ -47,6 +58,11 @@ const createStore = (reducers = {}, initialState) => {
   };
 };
 
+/**
+ * createHooks from contexts
+ * @param {Array} contexts 
+ * @returns 
+ */
 const createHooks = (contexts) => {
   return contexts.reduce((acc, { context, actionContext, key }) => {
     return {
