@@ -1,15 +1,4 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-
-import App from "./App";
-import Provider from "./clientState/index";
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <Provider>
-      <App />
-    </Provider>
-  </StrictMode>,
-  rootElement
-);
+export { default as configureStore } from "./configureStore";
+export { default as createAsyncDispatch } from "./createAsyncDispatch";
+export { default as combineDispatch } from "./combineDispatch";
+export { default as logger } from "./logger";

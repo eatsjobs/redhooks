@@ -1,4 +1,4 @@
-import { configureStore, logger } from "../redhooks";
+import { configureStore, logger } from "../../src";
 import { anotherToggleReducer, toggleReducer } from "./reducers";
 const { Provider, ...rest } = configureStore(
   {

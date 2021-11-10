@@ -1,4 +1,4 @@
-import { createAsyncDispatch } from "../redhooks";
+import { createAsyncDispatch } from "../../src";
 import { hooks } from "./index";
 const {
   useAnotherToggleDispatch,
