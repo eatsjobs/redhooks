@@ -1,3 +1,4 @@
+import React from "react";
 import { withToggleState } from "./clientState/connectors";
 
 const ToggleState = ({ state }) => {

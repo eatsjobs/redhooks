@@ -1,3 +1,4 @@
+import React from "react";
 import { withToggleActions } from "./clientState/connectors";
 
 const H2 = ({ actions }) => {

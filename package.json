@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "source": "redhooks/index.js",
-  "main": "dist/redhooks.js",
-  "umd:main": "dist/redhooks.umd.js",
-  "module": "dist/redhooks.m.js",
+  "source": "src/index.js",
+  "main": "lib/redhooks.js",
+  "umd:main": "lib/redhooks.umd.js",
+  "module": "lib/redhooks.m.js",
   "exports": {
-    "require": "./dist/redhooks.js",
-    "default": "./dist/redhooks.modern.js"
+    "require": "./lib/redhooks.js",
+    "default": "./lib/redhooks.modern.js"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -26,14 +26,18 @@
     "@types/jest": "^27.0.2",
     "babel-jest": "^27.3.1",
     "cross-env": "^7.0.3",
+    "http-server": "^14.0.0",
     "jest": "^27.3.1",
     "microbundle": "^0.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "scripts": {
+    "start": "npm run build:project && npm run serve",
     "build": "microbundle",
     "dev": "microbundle watch",
+    "build:project": "microbundle -i demo/index.js -o public/index.js --jsx React.createElement --jsxImportSource react",
+    "serve": "http-server public -c-1",
     "test": "jest"
   },
   "browserslist": [

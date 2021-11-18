@@ -1,4 +1,4 @@
-import { memo } from "react";
+import React, { memo } from "react";
 import { withComputedToggleState } from "./clientState/connectors";
 
 const ComputedToggleState = memo(({ state, actions }) => {
