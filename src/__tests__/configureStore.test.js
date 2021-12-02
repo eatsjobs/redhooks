@@ -66,16 +66,17 @@ const { Provider, useToggleState, useToggleDispatch } = configureStore(
 );
 
 
-const withToggleState = (Component) => {
-  return function({ ...props }) {
+const withToggleStateHOC = (Component) => {
+  function withToggleState({ ...props }) {
       const toggleState = useToggleState();
       const dispatch = useToggleDispatch();
       const action = () => dispatch({ type: 'TOGGLE' });
       return <Component {...props} toggleState={toggleState} toggleAction={action} />
   }
+  return withToggleState;
 }
 
-const BoundTestingComponent = withToggleState(TestingComponent)
+const BoundTestingComponent = withToggleStateHOC(TestingComponent)
 
 
 test('configureStore should render initial value', () => {

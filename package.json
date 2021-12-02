@@ -2,7 +2,7 @@
   "name": "redhooks",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": ["state management", "react", "redux", "react-redux", "redhooks", "hooks"],
   "source": "src/index.js",
   "main": "lib/redhooks.js",
   "umd:main": "lib/redhooks.umd.js",
