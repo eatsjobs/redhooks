@@ -1,6 +1,9 @@
 # Redhooks
 
-![redhooks](https://github.com/eatsjobs/redhooks/blob/main/redhooks.png?raw=true)
+<p align="center">
+<img src="https://github.com/eatsjobs/redhooks/blob/main/redhooks.png?raw=true" alt="redhooks"/>
+</p>
+
 
 
 A redux-like implementation without redux, and without Providers pyramid of doom!
