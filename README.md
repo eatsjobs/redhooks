@@ -1,5 +1,8 @@
 # Redhooks
 
+![redhooks](https://github.com/eatsjobs/redhooks/blob/main/redhooks.png?raw=true)
+
+
 A redux-like implementation without redux, and without Providers pyramid of doom!
 
 ## Why?
@@ -18,7 +21,7 @@ of your application. Like this.
 import React from 'react';
 import { render } from 'react-dom';
 
-import { configureStore, logger } from 'redhoooks';
+import { configureStore, logger } from '@eatsjobs/redhoooks';
 import { toggleReducer, anotherToggleReducer } from './reducers';
 
 
@@ -46,7 +49,7 @@ const App = () => {
 
 render(<Provider>
     <App />
-</Provider>
+ </Provider>
 , document.getElementById('root'));
 
 ```
